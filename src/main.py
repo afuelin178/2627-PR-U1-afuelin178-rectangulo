@@ -11,9 +11,6 @@ def calcular_medidas(base: int, altura: int) -> tuple[int, int]:
 	area: int = base * altura
 	perimetro: int = (base * 2) + (altura * 2)
 	
-	if base == 0 or altura == 0:
-		area == "ERROR!"
-		perimetro == "ERROR!"
 		
 	return area, perimetro
 
@@ -36,9 +33,6 @@ def determinar_forma(base: int, altura: int) -> str:
 		forma = "horizontal"
 	else:
 		forma = "vertical"
-	
-	if base == 0 or altura == 0:
-		forma == "ERROR!"
 		
 	return forma
 	
@@ -47,22 +41,22 @@ def determinar_forma(base: int, altura: int) -> str:
 def main():
 	""" Función principal del programa """
 	print("CALCULADORA DE RECTÁNGULOS")
-	print("-" * 25)
+	print("-" * len("CALCULADORA DE RECTÁNGULOS"))
 	
 	base: int = int(input("Introduzca la base: "))
 	altura: int = int(input("Introduzca la altura: "))
-	
-	medidas = calcular_medidas(base, altura)
-	forma = determinar_forma(base, altura)
-	
-	print("")
-	print(f"Forma: {forma}")
-	print(f"Área: {medidas[0]} cm²")
-	print(f"Perímetro: {medidas[1]} cm²")
-	
-	
-	
 
+	if base <= 0 or altura <= 0:
+		print("ERROR!")
+	else:
+		medidas = calcular_medidas(base, altura)
+		forma = determinar_forma(base, altura)
+		print("")
+		print(f"Forma: {forma}")
+		print(f"Área: {medidas[0]} cm²")
+		print(f"Perímetro: {medidas[1]} cm²")
+	
+	
 
 if __name__ == "__main__":
 	main()
