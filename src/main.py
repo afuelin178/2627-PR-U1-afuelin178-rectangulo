@@ -7,14 +7,11 @@ def calcular_medidas(base: int, altura: int) -> tuple[int, int]:
 	
 	:return: Devuelve una tupla con el área y el perímetro, en ese orden
 	"""
+
+	area: int = base * altura
+	perimetro: int = (base * 2) + (altura * 2)
 	
-	base = 0
-	altura = 0
-	
-	area = base * altura
-	perimetro = (base * 2) + (altura * 2)
-	
-	if base == 0 or altura == 0
+	if base == 0 or altura == 0:
 		area == "ERROR!"
 		perimetro == "ERROR!"
 		
@@ -22,7 +19,7 @@ def calcular_medidas(base: int, altura: int) -> tuple[int, int]:
 
 
 
-def determinar_forma(base: int, altura: int) -> str
+def determinar_forma(base: int, altura: int) -> str:
 	"""
 	Determinar la forma del cuadrado
 	
@@ -40,20 +37,20 @@ def determinar_forma(base: int, altura: int) -> str
 	else:
 		forma = "vertical"
 	
-	if base == 0 or altura == 0
+	if base == 0 or altura == 0:
 		forma == "ERROR!"
 		
 	return forma
 	
 	
 
-main():
+def main():
 	""" Función principal del programa """
 	print("CALCULADORA DE RECTÁNGULOS")
-	print("-" * 15)
+	print("-" * 25)
 	
-	base = int(input("Introduzca la base: ")
-	altura = int(input("Introduzca la altura: ")
+	base: int = int(input("Introduzca la base: "))
+	altura: int = int(input("Introduzca la altura: "))
 	
 	medidas = calcular_medidas(base, altura)
 	forma = determinar_forma(base, altura)
